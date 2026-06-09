@@ -1,0 +1,7 @@
+from django.contrib import admin
+from apps.catalogos.cliente.models import Cliente
+
+@admin.register(Cliente)
+class ClienteAdmin(admin.ModelAdmin):
+    search_fields = ['id', 'nombre']
+    list_display = ['nombre', 'apellido', 'edad', 'departamento', 'genero']
