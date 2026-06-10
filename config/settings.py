@@ -46,9 +46,13 @@ from apps.seguridad.setting_apps import SEGURIDAD_SETTING_APPS
 SECRET_KEY = 'django-insecure-!68n-hl(0@b&_@aw4ejp220$2ey*(ixvyr71@rw&yl=i4*(*ed'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "backendemundo.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
