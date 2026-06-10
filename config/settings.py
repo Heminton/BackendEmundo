@@ -114,18 +114,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'mssql',  # Utilizamos el backend mssql-django
-        'NAME': 'Edmundo1',  # Nombre de la base de datos
-        'HOST': 'melquis\\SQLDEV3',  # IP del servidor SQL Server
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',  # Driver ODBC instalado
-            'trusted_connection': 'yes',  # Habilita la autenticación de Windows
-            'extra_params': 'TrustServerCertificate=yes',  # Útil si estás usando SSL sin un certificado de confianza
-        },
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mssql',  # Utilizamos el backend mssql-django
+#         'NAME': 'Edmundo1',  # Nombre de la base de datos
+#         'HOST': 'melquis\\SQLDEV3',  # IP del servidor SQL Server
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',  # Driver ODBC instalado
+#             'trusted_connection': 'yes',  # Habilita la autenticación de Windows
+#             'extra_params': 'TrustServerCertificate=yes',  # Útil si estás usando SSL sin un certificado de confianza
+#         },
+#     }
+# }
 
 
 
@@ -145,17 +145,17 @@ DATABASES = {
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.getenv('DB_NAME'),
-#         'USER': os.getenv('DB_USERNAME'),
-#         'PASSWORD': os.getenv('DB_PASSWORD'),
-#         'HOST': os.getenv('DB_HOST'),
-#         'PORT': os.getenv('DB_PORT', '5432'),
-#         'CONN_MAX_AGE': 300,
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USERNAME'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '5432'),
+        'CONN_MAX_AGE': 300,
+    }
+}
 
 
 # DATABASES = {
